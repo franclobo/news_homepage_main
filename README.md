@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+# Frontend Mentor - News homepage solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![](./screenshot.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Solution URL: [News Homepage Main](https://github.com/franclobo/news_homepage_main)
+- Live Site URL: [News Homepage](https://news-homepage-20230620.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+1. Initialize the project as a public repository on [GitHub](https://github.com/). Creating a repo to share the code with the community.
+2. Configure the repository to publish the code to a web address.
+3. Look through the designs to start planning out how to tackle the project.
+4. Before adding any styles, structure the content with HTML.
+5. Write out the base styles for the project, including general content styles, such as `font-family` and `font-size`.
+6. Start adding styles to the top of the page and work down.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Built with
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Semantic HTML5 markup
+- SASS custom properties
+- Flexbox
+- CSS Grid
+- [React](https://reactjs.org/) - JS library
+- [React Bootstrap](https://react-bootstrap.netlify.app/) - CSS framework
+- [Material UI](https://mui.com/) - CSS framework
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### What I learned
 
-## Learn More
+I learned how to edit components from Material UI and React Bootstrap. I also learned how to use SASS and how to use the grid system from Bootstrap.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```css
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+.MuiContainer-root {
+  background-color: var(--off-white);
+  color: var(--dark-grayish-blue);
+}
 
-### Code Splitting
+.MuiBox-root {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+.MuiList-root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+```
+```js
+<Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  alignItems: "flex-start",
+                  width: "100%",
+                }}
+              >
+                <IconButton
+                  aria-label="Close"
+                  onClick={handleCloseNavMenu}
+                  color="inherit"
+                  sx={{
+                    position: "absolute",
+                    top: 0,
+                    right: 0,
+                  }}
+                >
+                  <CloseIcon />
+                </IconButton>
+              </Box>
+              {pages.map((page) => (
+                <MenuItem
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    "&:hover": {
+                      background: "none",
+                    },
+                  }}
+                >
+                  <Typography
+                    textAlign="center"
+                    sx={{
+                      color: "hsl(236, 13%, 42%)",
+                      "&:hover": {
+                        color: "hsl(5, 85%, 63%)",
+                        background: "none",
+                        fontFamily: "inter",
+                        fontWeight: "400",
+                      },
+                    }}
+                  >
+                    {page}
+                  </Typography>
+                </MenuItem>
+              ))}
+```
 
-### Analyzing the Bundle Size
+### Continued development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Create functional links for the nav menu.
+- Use API to fetch data for the articles.
 
-### Making a Progressive Web App
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [Edit Material UI components](https://mui.com/material-ui/api/app-bar/) - This helped me to edit the components from Material UI.
+- [Root CSS](https://developer.mozilla.org/es/docs/Web/CSS/:root) - This is an amazing article which helped me finally understand how to use the root CSS.
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Website - [Portfolio](https://borja-lobato-francisco-potfolio.netlify.app/)
+- Frontend Mentor - [@franclobo](https://www.frontendmentor.io/profile/franclobo)
+- Twitter - [@Pancho2788](https://twitter.com/Pancho2788)
 
-### Deployment
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I want to acknowledge to Frontend Mentor team. I'm really grateful for the opportunity to learn and improve my skills. I'm looking forward to the next challenge.
