@@ -27,7 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+| Desktop version | Mobile version |
+|---|---|
+| ![image](https://github.com/franclobo/news_homepage_main/assets/58642949/53d62d60-7693-4a3b-a841-cb08bd5a2d0f) | ![image](https://github.com/franclobo/news_homepage_main/assets/58642949/ff28761b-dbe5-4fd0-affe-ddfbbe115444) |
+
+
 
 ### Links
 
