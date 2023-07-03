@@ -57,8 +57,6 @@ Users should be able to:
 - [React Bootstrap](https://react-bootstrap.netlify.app/) - CSS framework
 - [Material UI](https://mui.com/) - CSS framework
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
 I learned how to edit components from Material UI and React Bootstrap. I also learned how to use SASS and how to use the grid system from Bootstrap.
